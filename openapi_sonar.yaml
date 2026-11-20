@@ -1423,7 +1423,163 @@ paths:
       x-quantumCode: 'https://bitbucket.org/spilab/quantum-circuits-code/raw/71b3698e39f9b27a4c31614252c134c62d04ff41/Oracular/subset_finding_circuit.py'
       x-quantumProvider: 'ibm'
 
+  /circuit/BellStateIBMquirk:
+    get:
+      tags:
+        - quantum_code
+      summary: Get the circuit implementation of Bell State
+      description: ''
+      operationId: BellStateIBMquirk
+      parameters:
+        - name: machine
+          in: query
+          description: quantum machine
+          required: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          description: Number of shots
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      x-quantumCode: 'https://algassert.com/quirk?provider=ibm#circuit=%7B%22cols%22%3A%5B%5B%22H%22%2C1%5D%2C%5B%22%E2%80%A2%22%2C%22X%22%5D%2C%5B%22Measure%22%2C%22Measure%22%5D%5D%7D'
+      x-quantumProvider: 'ibm'
 
+  /circuit/BellStateAWSquirk:
+    get:
+      tags:
+        - quantum_code
+      summary: Get the circuit implementation of Bell State
+      description: ''
+      operationId: BellStateAWSquirk
+      parameters:
+        - name: machine
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      x-quantumCode: 'https://algassert.com/quirk?provider=aws#circuit=%7B%22cols%22%3A%5B%5B%22H%22%2C1%5D%2C%5B%22%E2%80%A2%22%2C%22X%22%5D%2C%5B%22Measure%22%2C%22Measure%22%5D%5D%7D'
+      x-quantumProvider: 'aws'
+    
+  /circuit/GHZIBMquirk:
+    get:
+      tags:
+        - quantum_code
+      summary: Get the circuit implementation of GHZ State
+      description: ''
+      operationId: GHZIBMquirk
+      parameters:
+        - name: machine
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      x-quantumCode: 'https://algassert.com/quirk?provider=ibm#circuit=%7B%22cols%22%3A%5B%5B%22H%22%2C1%2C1%5D%2C%5B%22%E2%80%A2%22%2C%22X%22%2C1%5D%2C%5B%22%E2%80%A2%22%2C1%2C%22X%22%5D%2C%5B%22Measure%22%2C%22Measure%22%2C%22Measure%22%5D%5D%7D'
+      x-quantumProvider: 'ibm'
+
+  /circuit/GHZAWSquirk:
+    get:
+      tags:
+        - quantum_code
+      summary: Get the circuit implementation of GHZ State
+      description: ''
+      operationId: GHZAWSquirk
+      parameters:
+        - name: machine
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      x-quantumCode: 'https://algassert.com/quirk?provider=aws#circuit=%7B%22cols%22%3A%5B%5B%22H%22%2C1%2C1%5D%2C%5B%22%E2%80%A2%22%2C%22X%22%2C1%5D%2C%5B%22%E2%80%A2%22%2C1%2C%22X%22%5D%2C%5B%22Measure%22%2C%22Measure%22%2C%22Measure%22%5D%5D%7D'
+      x-quantumProvider: 'aws'
+
+  /circuit/SuperdenseCodingIBMquirk:
+    get:
+      tags:
+        - quantum_code
+      summary: Get the circuit implementation of Superdense Coding
+      description: ''
+      operationId: SuperdenseCodingIBMquirk
+      parameters:
+        - name: machine
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      x-quantumCode: 'https://algassert.com/quirk?provider=ibm#circuit=%7B%22cols%22%3A%5B%5B%22H%22%2C1%5D%2C%5B%22%E2%80%A2%22%2C%22X%22%5D%2C%5B%22X%22%2C1%5D%2C%5B%22%E2%80%A2%22%2C%22X%22%5D%2C%5B%22H%22%2C1%5D%2C%5B%22Measure%22%2C%22Measure%22%5D%5D%7D'
+      x-quantumProvider: 'ibm'
+
+  /circuit/SuperdenseCodingAWSquirk:
+    get:
+      tags:
+        - quantum_code
+      summary: Get the circuit implementation of Superdense Coding
+      description: ''
+      operationId: SuperdenseCodingAWSquirk
+      parameters:
+        - name: machine
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      x-quantumCode: 'https://algassert.com/quirk?provider=aws#circuit=%7B%22cols%22%3A%5B%5B%22H%22%2C1%5D%2C%5B%22%E2%80%A2%22%2C%22X%22%5D%2C%5B%22X%22%2C1%5D%2C%5B%22%E2%80%A2%22%2C%22X%22%5D%2C%5B%22H%22%2C1%5D%2C%5B%22Measure%22%2C%22Measure%22%5D%5D%7D'
+      x-quantumProvider: 'aws'
 
   /findByCategory:
     get:
